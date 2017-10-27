@@ -17,7 +17,7 @@ class Card extends Component {
   }
 
   render() {
-    let question = this.state.showTitle ? this.props.title + '__________' : '';
+    let question = this.state.showTitle ? this.props.title + ' __________.' : '';
     return (
       <div className="col-sm-6 col-md-4 col-lg-4">
           <div className="card" onClick={this._showCard}>

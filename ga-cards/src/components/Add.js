@@ -12,15 +12,9 @@ class Add extends Component {
       title: ""
     };
 
-    this._handleClick = this._handleClick.bind(this);
     this._updateText = this._updateText.bind(this);
     this._handleSubmit = this._handleSubmit.bind(this);
   };
-
-  _handleClick(e){
-    // TODO:
-    console.log("redirect to home!");
-  }
 
   _updateText(e){
     this.setState({
@@ -36,9 +30,7 @@ class Add extends Component {
         title: this.state.title
       })
       .then(()=>{
-        this.setState({
-          title: ""
-        });
+        window.location.replace('/');
       });
   }
 
