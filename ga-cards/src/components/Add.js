@@ -1,31 +1,55 @@
 import React, { Component } from 'react';
 // import './App.css';
+import { database } from '../utils/firebase.js';
 
 class Add extends Component {
   constructor(props){
     super(props);
 
     this.state = {
-      preview: "A preview appears here as you type..."
-    }
+      title: ""
+    };
+
+    this._handleClick = this._handleClick.bind(this);
     this._updateText = this._updateText.bind(this);
+    this._handleSubmit = this._handleSubmit.bind(this);
   };
+
+  _handleClick(e){
+    // TODO:
+    console.log("redirect to home!");
+  }
 
   _updateText(e){
     this.setState({
-      preview: e.target.value
+      title: e.target.value
     });
+  }
+
+  _handleSubmit(e){
+    e.preventDefault();
+    // TODO: if duplicate, don't let it happen
+    database.ref('/cards')
+      .push({
+        title: this.state.title
+      })
+      .then(()=>{
+        this.setState({
+          title: ""
+        });
+      });
   }
 
   render() {
     return (
       <div className="App">
-        <form name="add-card" id="add-card">
+        <form name="add-card" id="add-card" onSubmit={this._handleSubmit}>
           <input type="text" name="question" id="question" placeholder="What's your question?" value={this.state.preview} onChange={this._updateText}/>
+          <button onClick={this._handleClick}>SUBMIT</button>
         </form>
         <br/>
         <div className="card">
-          <h4 className="card-title">{this.state.preview}</h4>
+          <h4 className="card-title">{this.state.title}</h4>
           <h6>Cards Against Assembly</h6>
         </div>
       </div>

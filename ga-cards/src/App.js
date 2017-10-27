@@ -19,9 +19,9 @@ class App extends Component {
           <div>
             <h1>Cards Against Assembly</h1>
             <nav className="tabs">
-              <NavLink exact to="/">Home</NavLink>{" "}
-              <NavLink to="/about">About</NavLink>{" "}
-              <NavLink to="/add">Add</NavLink>
+              <NavLink exact to="/">Home</NavLink>
+              <NavLink to="/add">Add New Card</NavLink>
+              <NavLink to="/about">About</NavLink>
             </nav>
             <Switch>
               <Route exact path="/" component={Home}/>
