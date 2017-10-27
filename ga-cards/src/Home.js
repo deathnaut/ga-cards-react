@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import CardList from './components/CardList.js';
+import './components/Home.css';
 
 class Home extends Component {
   render() {
