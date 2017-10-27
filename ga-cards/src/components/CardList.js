@@ -24,16 +24,8 @@ class CardList extends Component {
 
   render() {
     var cardComponents = this.state.cards.map((cardData=>
-      // return one meme component and insert url into {url}
       <Card key={cardData.id} title={cardData.title}/>
     ));
-
-    // alt solution for above
-    // var memeComponents = [];
-    // for (let i = 0; i<imageUrls.length; i++){
-    //   memeComponents.push(<Meme key={i} url={imageUrls[i]} />);
-    // }
-
     return (
       <section id="cards" className="container-fluid">
         <div className="row">

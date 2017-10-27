@@ -1,23 +1,27 @@
 import React, { Component } from 'react';
+import './Card.css'
 
 class Card extends Component {
   constructor(props){
     super(props);
     this.state = {
-      show: false,
+      showTitle: this.props.showTitle || false
     }
-    this._showContent = this._showContent.bind(this);
+    this._showCard = this._showCard.bind(this);
   }
 
-  _showContent(e){
-    console.log("hide/show content!");
+  _showCard(e){
+    this.setState({
+      showTitle: !this.state.showTitle
+    })
   }
 
   render() {
+    let question = this.state.showTitle ? this.props.title + '__________' : '';
     return (
       <div className="col-sm-6 col-md-4 col-lg-4">
-          <div className="card" onClick={this._showContent}>
-            <h4 className="card-title">{this.props.title}</h4>
+          <div className="card" onClick={this._showCard}>
+            <h4 className="card-title">{question}</h4>
             <h6>Cards Against Assembly</h6>
           </div>
       </div>
