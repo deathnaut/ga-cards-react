@@ -12,7 +12,7 @@ class Add extends Component {
   render() {
     return (
       <div className="App">
-        add page
+        <h2>meow</h2>
       </div>
     );
   }

@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-// import './App.css';
-import About from './components/About.js';
-import Add from './components/Add.js';
-
+import CardList from './components/CardList.js';
 
 class Home extends Component {
   render() {
     return (
-      <div className="App">
-        <h1>Cards Against Assembly</h1>
-        <About />
-        <Add />
+      <div>
+        <h2>home</h2>
+        <section id="cards" className="container-fluid">
+          <div className="row">
+            <CardList />
+          </div>
+        </section>
       </div>
     );
   }

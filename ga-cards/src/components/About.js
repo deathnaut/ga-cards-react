@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import './App.css';
 
 class About extends Component {
   constructor(props){
@@ -12,7 +11,7 @@ class About extends Component {
   render() {
     return (
       <div className="About">
-        about page
+        <p>"Where are my testicles, Summer? You ask alotta questions Morty, not very charismatic of you. They're not infinite universes left in sync with the show. Why'd you even rope me into this?!"</p>
       </div>
     );
   }
