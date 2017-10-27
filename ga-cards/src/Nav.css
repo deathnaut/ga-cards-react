@@ -1,0 +1,21 @@
+nav.tabs {
+  max-width: 55%;
+}
+nav.tabs a {
+  display: inline-block;
+  color: black;
+  background-color: white;
+  padding: 4px 20px;
+  margin-bottom: 24px;
+  margin-right: 1px;
+}
+nav.tabs a.active {
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+header.navbar {
+  border-radius: 0;
+}

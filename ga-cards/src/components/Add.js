@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 // import './App.css';
 import { database } from '../utils/firebase.js';
+import './Add.css';
+
 
 class Add extends Component {
   constructor(props){
