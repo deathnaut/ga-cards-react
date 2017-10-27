@@ -3,6 +3,9 @@ import './App.css';
 import Home from './Home.js';
 import About from './components/About.js';
 import Add from './components/Add.js';
+import './Nav.css';
+
+
 import {
   BrowserRouter as Router,
   Route,
