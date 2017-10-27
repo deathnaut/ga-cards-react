@@ -17,7 +17,9 @@ class App extends Component {
       <div className="container">
         <Router>
           <div>
-            <h1>Cards Against Assembly</h1>
+            <header className="navbar">
+              <h1 className="pull-left">Cards Against Assembly</h1>
+            </header>
             <nav className="tabs">
               <NavLink exact to="/">Home</NavLink>
               <NavLink to="/add">Add New Card</NavLink>

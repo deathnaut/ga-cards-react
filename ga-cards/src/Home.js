@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './App.css';
 import CardList from './components/CardList.js';
 
 class Home extends Component {
