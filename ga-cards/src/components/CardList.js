@@ -35,8 +35,8 @@ class CardList extends Component {
     // }
 
     return (
-      <section>
-        <div className="row card">
+      <section id="cards" className="container-fluid">
+        <div className="row">
           {cardComponents}
         </div>
       </section>
